@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarization</title>
+</head>
+<body>
+    <h1>Video Summarization</h1>
+    <p>Please enter the URL of the YouTube video you want to summarize:</p>
+    <form id="videoForm" action="{{ url_for('upload_video') }}" method="post">
+        <input type="text" id="videoUrl" name="video_url" placeholder="Enter YouTube Video URL" required>
+        <button type="submit">Summarize</button>
+    </form>
+    <div id="summaryResult"></div>
+
+<!--    <script>-->
+<!--        document.getElementById("videoForm").addEventListener("submit", function(event){-->
+<!--            event.preventDefault();-->
+<!--            var form = event.target;-->
+<!--            var formData = new FormData(form);-->
+<!--            fetch(form.action, {-->
+<!--                method: form.method,-->
+<!--                body: formData-->
+<!--            })-->
+<!--            .then(response => response.json())-->
+<!--            .then(data => {-->
+<!--                if (data.summary_path) {-->
+<!--                    var videoElement = document.createElement("video");-->
+<!--                    videoElement.src = data.summary_path;-->
+<!--                    videoElement.controls = true;-->
+<!--                    document.getElementById("summaryContainer").innerHTML = '';-->
+<!--                    document.getElementById("summaryContainer").appendChild(videoElement);-->
+<!--                } else if (data.error) {-->
+<!--                    alert(data.error);-->
+<!--                }-->
+<!--            })-->
+<!--            .catch(error => {-->
+<!--                console.error('Error:', error);-->
+<!--                alert('An error occurred while uploading the video.');-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+</body>
+</html>

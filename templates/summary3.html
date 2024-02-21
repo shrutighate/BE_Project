@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarization Results</title>
+    <!-- Add any additional CSS styling here -->
+</head>
+<body>
+    <h1>Summarization Results</h1>
+
+    <div>
+        <p><strong>Summary:</strong></p>
+<!--        <video width="320" height="240" controls>-->
+<!--        <source src="C:\Users\tejas\PycharmProjects\pythonProject3\summary.mp4" type="video/mp4" />-->
+<!--            Your browser does not support the video tag.-->
+<!--    </video>-->
+    </div>
+
+    <div id="video-container">
+    <video id="video-player" controls>
+        <source src= "C:\Users\tejas\PycharmProjects\pythonProject3\summary.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+    <script>
+    // Get a reference to the video element
+    var video = document.getElementById('video-player');
+
+    // You can play the video using JavaScript
+    video.play();
+
+    // You can also pause the video using JavaScript
+    video.pause();
+</script>
+    <!-- Add any additional HTML elements or styling here -->
+</body>
+</html>

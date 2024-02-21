@@ -1,0 +1,88 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Video Summarizer</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Video Summarizer 🎬</h1>-->
+
+<!--    <form method="post" action="{{ url_for('get_summary') }}">-->
+<!--        <label for="video_link">Enter video link:</label>-->
+<!--        <input type="text" id="video_link" name="video_link" required>-->
+<!--        <button type="submit">Get Summary</button>-->
+<!--    </form>-->
+
+<!--    &lt;!&ndash; Display any error messages here &ndash;&gt;-->
+<!--    {% if error %}-->
+<!--        <p style="color: red;">{{ error }}</p>-->
+<!--    {% endif %}-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <title>Video Summarization</title>
+    <style>
+            body{
+               background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+              }
+            h1{
+                margin-top: 20px !important;
+                background-color: aliceblue;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bolder !important;
+                }
+        header{
+                padding: 10px;
+                }
+        .container{
+                margin-top: 100px !important;
+                text-align: center;
+        }
+        input[type="file"]::file-selector-button {
+            border: 2px solid #6c5ce7;
+            padding: 0.2em 0.4em;
+            border-radius: 0.2em;
+            background-color: ;
+            transition: 1s;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background-color: #81ecec;
+            border: 2px solid #00cec9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align:center">Multimedia Summarization App</h1>
+    </header>
+    <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 shadow-lg p-3 mb-5 bg-white rounded">
+                    <h1 class="text-center">Video Summarization 📽️</h1>
+                        <form method="post" action="{{ url_for('get_summary') }}">
+                            <label for="video_link">Enter video link:</label>
+                            <input type="text" id="video_link" name="video_link" required>
+                            <br>
+                            <br>
+                            <button class="btn btn-primary" type="submit" value="Upload File">Get Summary</button>
+                       </form>
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+</html>
+
